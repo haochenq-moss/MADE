@@ -1,10 +1,9 @@
 # MADE: MAterials Discovery Environments
 
-This is the official code repository for the paper:
+This is the official code repository for the ICML 2026 paper:
 
 > **MADE: Benchmark Environments for Closed-Loop Materials Discovery**
 > [Arxiv Preprint](https://arxiv.org/abs/2601.20996)
-> [NeurIPS AI4Mat 2025 Workshop Paper](https://openreview.net/pdf?id=Cfj7uBu5dy)
 
 ## Overview
 
