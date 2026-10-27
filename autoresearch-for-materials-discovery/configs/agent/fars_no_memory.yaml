@@ -1,0 +1,5 @@
+defaults:
+  - fars
+  - _self_
+
+controller_memory: none

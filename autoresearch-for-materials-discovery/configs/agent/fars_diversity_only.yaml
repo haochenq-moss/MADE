@@ -1,0 +1,23 @@
+defaults:
+  - fars
+  - _self_
+
+scheduler_mode: fixed
+fixed_action: EXPLORE
+train_scheduler: false
+enabled_tools:
+  - generate_structures
+  - list_compositions
+  - query_structures
+  - get_buffer_stats
+  - select_for_evaluation
+generators:
+  chemeleon: null
+context_config:
+  orchestration_prompt: |
+    You are an autonomous materials discovery agent.
+    Maximize coverage of distinct valid compositions using only the enabled
+    random structure generator. Prefer a composition that has not yet been
+    queried; do not use surrogate scoring or prefer a composition because of
+    its observed outcomes. Use the existing ReAct buffer and filters, then
+    select one candidate for the official oracle query.

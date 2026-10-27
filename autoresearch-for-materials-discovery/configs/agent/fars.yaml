@@ -1,0 +1,28 @@
+defaults:
+  - /agent/llm_react_orchestrator@_here_
+  - _self_
+
+_target_: autoresearch_for_materials_discovery.agent.FARSAgent
+
+scheduler_mode: q_learning
+fixed_action: EXPLORE
+controller_memory: full
+scheduler_seed: ${experiment.seed}
+learning_rate: 0.2
+discount: 0.9
+epsilon: 0.1
+train_scheduler: false
+q_values: {}
+initial_q_values_path: null
+
+episode_budget: ${environment.budget}
+max_candidates_per_query: 32
+max_generated_per_episode: 640
+max_scored_per_query: 32
+controller_log_dir: ${hydra:runtime.output_dir}/controller-logs
+q_values_path: ${.controller_log_dir}/q_values.json
+
+# Use the approved base-model settings; direct, unbudgeted structure creation is disabled by FARSAgent.
+generators:
+  random:
+    seed: ${experiment.seed}

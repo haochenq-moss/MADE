@@ -1,0 +1,14 @@
+defaults:
+  - /agent/llm_react_orchestrator@_here_
+  - _self_
+
+_target_: autoresearch_for_materials_discovery.agent.CappedLLMOrchestratorControl
+
+max_candidates_per_query: 32
+max_generated_per_episode: 640
+max_scored_per_query: 32
+controller_log_dir: ${hydra:runtime.output_dir}/controller-logs
+
+generators:
+  random:
+    seed: ${experiment.seed}

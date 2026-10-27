@@ -1,0 +1,5 @@
+defaults:
+  - fars_train
+  - _self_
+
+# The Slurm launcher supplies the project-local merged Q-table by default.

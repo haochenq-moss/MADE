@@ -1,0 +1,5 @@
+defaults:
+  - fars_train
+  - _self_
+
+candidate_selection_policy: balanced_formula

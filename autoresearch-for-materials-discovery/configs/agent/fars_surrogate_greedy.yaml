@@ -1,0 +1,15 @@
+defaults:
+  - fars
+  - _self_
+
+scheduler_mode: fixed
+fixed_action: REFINE
+train_scheduler: false
+context_config:
+  orchestration_prompt: |
+    You are an autonomous materials discovery agent.
+    Use the existing ReAct history and candidate buffer. For each proposal, use the
+    enabled Chemeleon generator conditionally on a composition from the observed
+    system history. Score buffered structures with the configured surrogate, then
+    select the highest-scoring feasible candidate for the official oracle query.
+    Treat surrogate scores as ranking signals only, never as oracle outcomes.

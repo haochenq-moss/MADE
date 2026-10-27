@@ -1,0 +1,6 @@
+defaults:
+  - fars
+  - _self_
+
+train_scheduler: true
+epsilon: 0.2

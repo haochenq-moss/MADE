@@ -1,0 +1,10 @@
+defaults:
+  - fars
+  - _self_
+
+enabled_tools:
+  - generate_structures
+  - list_compositions
+  - query_structures
+  - get_buffer_stats
+  - select_for_evaluation

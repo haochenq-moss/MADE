@@ -95,3 +95,9 @@ exclude_lines = [
     "raise AssertionError",
     "raise NotImplementedError",
 ]
+
+[tool.uv.workspace]
+members = [
+    "auto-research-for-materials-discovery",
+    "autoresearch-for-materials-discovery",
+]

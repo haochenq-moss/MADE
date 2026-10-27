@@ -1,4 +1,4 @@
-use_wandb: true
+use_wandb: false
 wandb_project: "made-benchmark"
 wandb_entity: your-wandb-username # Set to your wandb username/team
 wandb_run_name: null # Optionally set a unique run name for the benchmark

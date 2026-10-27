@@ -32,8 +32,8 @@ Set up API keys or add to .env file:
 ```bash
 export MATERIALS_PROJECT_API_KEY=your_key
 export WANDB_API_KEY=your_key  # optional
-export ANTHROPIC_API_KEY=your_key  # for Anthropic agents
-export OPENAI_API_KEY=your_key  # for OpenAI agents
+export ANTHROPIC_API_KEY=your_key
+export OPENAI_API_KEY=your_key
 ```
 
 Add these API keys to Modal secrets too if running on Modal.

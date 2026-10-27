@@ -1,0 +1,6 @@
+defaults:
+  - fars
+  - _self_
+
+scheduler_mode: random
+train_scheduler: false

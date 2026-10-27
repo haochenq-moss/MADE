@@ -1,0 +1,24 @@
+defaults:
+  - /agent/llm_react_orchestrator@_here_
+  - _self_
+
+_target_: autoresearch_for_materials_discovery.branch_search.BranchSearchReActAgent
+
+scheduler_seed: ${experiment.seed}
+learning_rate: 0.2
+discount: 0.9
+epsilon: 0.1
+episode_budget: ${environment.budget}
+max_candidates_per_query: 32
+max_generated_per_episode: 1920
+max_stoichiometry: 20
+num_fraction_bins: 5
+controller_log_dir: ${hydra:runtime.output_dir}/controller-logs
+q_values_path: ${.controller_log_dir}/q-values.json
+
+scorers: null
+
+generators:
+  chemeleon: null
+  random:
+    seed: ${experiment.seed}
